@@ -1,0 +1,106 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar underline effect */
+.nav-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  border-radius: 9999px;
+  background-image: linear-gradient(to right, #7c3aed, #2563eb);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.nav-link.nav-active .nav-underline {
+  opacity: 1;
+}
+
+/* Fade on scroll */
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Avatar floating effect */
+@keyframes floatAvatar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Glow pulsing */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+.avatar-float {
+  animation: floatAvatar 3.5s ease-in-out infinite;
+}
+
+.avatar-glow {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Skill & tag pills (pure CSS, no @apply needed) */
+.skill-pill {
+  padding: 0.375rem 0.75rem;
+  background-color: #f9fafb; /* gray-50 */
+  color: #4f4f4f;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.group:hover .skill-pill {
+  border-color: #bfdbfe; /* blue-200 */
+  color: #2563eb; /* blue-600 */
+}
+
+.tag-pill {
+  padding: 0.25rem 0.5rem;
+  background-color: #f9fafb;
+  color: #4f4f4f;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  border: 1px solid #f3f4f6; /* gray-100 */
+  transition: border-color 0.2s ease;
+}
+
+.group:hover .tag-pill {
+  border-color: #bfdbfe; /* blue-200 */
+}
+
+/* Mobile menu max-height animation helper */
+#mobile-menu.open {
+  max-height: 500px; /* enough for items */
+}

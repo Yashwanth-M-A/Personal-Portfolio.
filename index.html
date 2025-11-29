@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Yashwanth M A | Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-sans text-[#1A1A1A] bg-[#F5F5F5] selection:bg-violet-500 selection:text-white min-h-screen">
+
+  <!-- Scroll Progress -->
+  <div
+    id="scroll-progress"
+    class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-600 to-blue-500 origin-left z-[60]"
+    style="transform: scaleX(0);"
+  ></div>
+
+  <!-- Navbar -->
+  <nav
+    id="navbar"
+    class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent"
+  >
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div
+        class="text-xl font-bold bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent cursor-pointer tracking-tight"
+        id="brand-name"
+      >
+        Yashwanth M A
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-blue-600" data-target="home">
+          Home
+          <span class="nav-underline"></span>
+        </button>
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-[#4F4F4F]" data-target="about">
+          About
+          <span class="nav-underline"></span>
+        </button>
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-[#4F4F4F]" data-target="skills">
+          Skills
+          <span class="nav-underline"></span>
+        </button>
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-[#4F4F4F]" data-target="experience">
+          Experience
+          <span class="nav-underline"></span>
+        </button>
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-[#4F4F4F]" data-target="education">
+          Education
+          <span class="nav-underline"></span>
+        </button>
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-[#4F4F4F]" data-target="projects">
+          Projects
+          <span class="nav-underline"></span>
+        </button>
+        <button class="nav-link text-sm font-medium transition-colors hover:text-blue-600 relative text-[#4F4F4F]" data-target="contact">
+          Contact
+          <span class="nav-underline"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <div class="md:hidden">
+        <button id="mobile-toggle" class="text-[#1A1A1A]">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden overflow-hidden bg-white border-b border-gray-200 shadow-xl max-h-0 transition-all duration-300"
+    >
+      <div class="flex flex-col p-6 gap-4">
+        <button class="mobile-link text-left text-lg font-medium text-blue-600" data-target="home">Home</button>
+        <button class="mobile-link text-left text-lg font-medium text-[#4F4F4F]" data-target="about">About</button>
+        <button class="mobile-link text-left text-lg font-medium text-[#4F4F4F]" data-target="skills">Skills</button>
+        <button class="mobile-link text-left text-lg font-medium text-[#4F4F4F]" data-target="experience">Experience</button>
+        <button class="mobile-link text-left text-lg font-medium text-[#4F4F4F]" data-target="education">Education</button>
+        <button class="mobile-link text-left text-lg font-medium text-[#4F4F4F]" data-target="projects">Projects</button>
+        <button class="mobile-link text-left text-lg font-medium text-[#4F4F4F]" data-target="contact">Contact</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+
+    <!-- HOME -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-50/50">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-white pointer-events-none"></div>
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-200/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-200/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="text-center md:text-left space-y-8 fade-on-scroll">
+          <p class="text-violet-600 font-bold text-lg tracking-wide">Hello, I’m</p>
+          <h1 class="text-5xl md:text-7xl font-bold text-[#1A1A1A] leading-tight tracking-tight">
+            Yashwanth M A
+          </h1>
+          <div>
+            <h2 class="text-xl md:text-2xl text-[#4F4F4F] font-medium">
+              <span class="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent font-bold">
+                AI & Full-Stack Development Enthusiast | Generative AI Practitioner | BE in AI & Data Science, Nitte Meenakshi Institute of Technology
+              </span>
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+            <a
+              href="#contact"
+              class="px-8 py-4 bg-gradient-to-r from-violet-600 to-blue-600 text-white rounded-lg font-bold shadow-md transition-all flex items-center gap-2 hover:scale-[1.03] hover:shadow-xl active:scale-95"
+            >
+              Contact Me
+              <i data-lucide="chevron-right" class="w-[18px] h-[18px]"></i>
+            </a>
+            <a
+              href="#projects"
+              class="px-8 py-4 bg-white text-[#1A1A1A] border border-gray-300 rounded-lg font-bold shadow-sm transition-all flex items-center gap-2 hover:scale-[1.03] hover:bg-gray-100 active:scale-95"
+            >
+              View my work
+              <i data-lucide="briefcase" class="w-[18px] h-[18px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Animated Avatar -->
+        <div class="flex justify-center md:justify-center">
+          <div class="relative group flex justify-center avatar-wrapper">
+            <div class="relative z-10 avatar-float">
+              <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-violet-600 to-blue-500 blur-xl opacity-20 avatar-glow"></div>
+              <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-1.5 bg-white border-2 border-black shadow-2xl overflow-hidden transform transition-transform duration-500 group-hover:scale-[1.04] group-hover:rotate-1">
+                <img
+                  src="https://image2url.com/images/1764419406645-e3e71737-0f4b-4d6d-ad42-c2707f74cac6.png"
+                  alt="Yashwanth M A"
+                  class="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 text-center fade-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">About Me</h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full mb-6 opacity-80"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+          <div class="space-y-6 text-lg text-[#4F4F4F] leading-relaxed fade-on-scroll">
+            <p>
+              I am a dedicated Artificial Intelligence and Data Science student at
+              <strong>Nitte Meenakshi Institute of Technology</strong>, passionate about applying technology with professionalism and precision.
+              I completed a Machine Learning internship at <strong>CodSoft</strong>, where I strengthened analytical thinking and technical rigor.
+            </p>
+            <p>
+              I focus on writing clean code, designing thoughtful user experiences, and exploring AI advancements with a disciplined, solution-driven mindset.
+              Committed to continuous learning and contributing to meaningful, high-impact technical initiatives.
+            </p>
+            <p>
+              Driven by a strong engineering mindset, I enjoy transforming complex ideas into reliable digital systems.
+              I stay aligned with industry practices, experiment with emerging AI models, and refine solutions through iterative learning.
+            </p>
+
+            <div class="flex flex-col gap-4 pt-8">
+              <a
+                href="mailto:yashwanthma2@gmail.com"
+                class="flex items-center gap-4 group w-fit"
+                aria-label="Email"
+              >
+                <div class="p-3 bg-gray-50 rounded-full text-[#EA4335] group-hover:bg-[#EA4335] group-hover:text-white transition-all shadow-sm group-hover:shadow-md">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <span class="text-lg font-medium text-[#4F4F4F] group-hover:text-[#EA4335] transition-colors break-all">
+                  yashwanthma2@gmail.com
+                </span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/yashwanth-m-a-768901303/"
+                target="_blank"
+                rel="noreferrer"
+                class="flex items-center gap-4 group w-fit"
+                aria-label="LinkedIn"
+              >
+                <div class="p-3 bg-gray-50 rounded-full text-[#0A66C2] group-hover:bg-[#0A66C2] group-hover:text-white transition-all shadow-sm group-hover:shadow-md">
+                  <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </div>
+                <span class="text-lg font-medium text-[#4F4F4F] group-hover:text-[#0A66C2] transition-colors break-all">
+                  LinkedIn
+                </span>
+              </a>
+
+              <a
+                href="https://github.com/Yashwanth-M-A"
+                target="_blank"
+                rel="noreferrer"
+                class="flex items-center gap-4 group w-fit"
+                aria-label="GitHub"
+              >
+                <div class="p-3 bg-gray-50 rounded-full text-[#333] group-hover:bg-[#333] group-hover:text-white transition-all shadow-sm group-hover:shadow-md">
+                  <i data-lucide="github" class="w-6 h-6"></i>
+                </div>
+                <span class="text-lg font-medium text-[#4F4F4F] group-hover:text-[#333] transition-colors break-all">
+                  GitHub
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative fade-on-scroll">
+            <div class="absolute inset-0 bg-gradient-to-tr from-violet-600 to-blue-600 rounded-2xl rotate-3 opacity-10"></div>
+            <img
+              src="https://image2url.com/images/1764248909241-787205f7-38f7-451f-b26a-2f8d209aa287.jpg"
+              alt="Working"
+              class="relative rounded-2xl shadow-xl transition-all duration-500 border border-gray-200"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-slate-50/50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 text-center fade-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">Technical Proficiency</h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full mb-6 opacity-80"></div>
+          <p class="text-[#4F4F4F] max-w-2xl mx-auto text-lg leading-relaxed">
+            A structured overview of my engineering capabilities.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 fade-on-scroll">
+          <!-- Core Engineering -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group transform hover:-translate-y-1">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 border border-blue-100 group-hover:bg-blue-600 transition-colors duration-300">
+              <i data-lucide="code-2" class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#1A1A1A] mb-4">Core Engineering</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Data Structures and Algorithms</span>
+              <span class="skill-pill">Object-Oriented Programming (OOP)</span>
+              <span class="skill-pill">Database Management Systems (DBMS)</span>
+            </div>
+          </div>
+
+          <!-- Frontend Architecture -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group transform hover:-translate-y-1">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 border border-blue-100 group-hover:bg-blue-600 transition-colors duration-300">
+              <i data-lucide="layout" class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#1A1A1A] mb-4">Frontend Architecture</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">Full-Stack Development</span>
+            </div>
+          </div>
+
+          <!-- Backend & Cloud -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group transform hover:-translate-y-1">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 border border-blue-100 group-hover:bg-blue-600 transition-colors duration-300">
+              <i data-lucide="server" class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#1A1A1A] mb-4">Backend &amp; Cloud</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- AI & Data Science -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group transform hover:-translate-y-1">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 border border-blue-100 group-hover:bg-blue-600 transition-colors duration-300">
+              <i data-lucide="brain" class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#1A1A1A] mb-4">AI &amp; Data Science</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">Generative AI Tools</span>
+              <span class="skill-pill">Machine Learning</span>
+              <span class="skill-pill">Data Science</span>
+            </div>
+          </div>
+
+          <!-- Other Competencies -->
+          <div class="bg-white p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group transform hover:-translate-y-1 md:col-span-2 lg:col-span-4">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 border border-blue-100 group-hover:bg-blue-600 transition-colors duration-300">
+              <i data-lucide="check-circle" class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#1A1A1A] mb-4">Other Competencies</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">Time Management</span>
+              <span class="skill-pill">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & CERTIFICATES -->
+    <section id="experience" class="py-24 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 text-center fade-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">Experience &amp; Certificates</h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full mb-6 opacity-80"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Experience Column -->
+          <div class="fade-on-scroll">
+            <h3 class="text-2xl font-bold text-[#1A1A1A] mb-8 flex items-center gap-3">
+              <i data-lucide="briefcase" class="w-6 h-6 text-violet-600"></i>
+              Experience
+            </h3>
+            <div class="space-y-8">
+              <div class="relative pl-8 border-l-2 border-gray-200 pb-8">
+                <span class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-violet-600"></span>
+                <h4 class="text-xl font-bold text-[#1A1A1A]">Machine Learning Intern</h4>
+                <p class="text-lg text-blue-600 font-medium mb-2">CodSoft</p>
+                <p class="text-sm text-gray-500 mb-4">Sept 10, 2025 – Oct 10, 2025 | Remote</p>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2 text-[#4F4F4F] text-sm leading-relaxed">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                    <span>Successfully completed a comprehensive internship gaining hands-on experience in implementing various machine learning algorithms.</span>
+                  </li>
+                  <li class="flex items-start gap-2 text-[#4F4F4F] text-sm leading-relaxed">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                    <span>Worked extensively on data preprocessing, model training, and evaluation pipelines.</span>
+                  </li>
+                  <li class="flex items-start gap-2 text-[#4F4F4F] text-sm leading-relaxed">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                    <span>Strengthened understanding of supervised and unsupervised learning techniques.</span>
+                  </li>
+                  <li class="flex items-start gap-2 text-[#4F4F4F] text-sm leading-relaxed">
+                    <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></span>
+                    <span>Enhanced proficiency in Python, data analysis, model optimization, and problem-solving strategies.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificates Column -->
+          <div class="fade-on-scroll">
+            <h3 class="text-2xl font-bold text-[#1A1A1A] mb-8 flex items-center gap-3">
+              <i data-lucide="award" class="w-6 h-6 text-blue-600"></i>
+              Certificates
+            </h3>
+            <div class="grid gap-4">
+              <a
+                href="https://image2url.com/images/1764396214179-c4642a4b-bd26-4d5c-b6eb-d54789040f78.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h4 class="font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                      Codsoft Machine Learning Internship
+                    </h4>
+                    <p class="text-sm text-[#4F4F4F] mt-1">Codsoft</p>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors"></i>
+                </div>
+              </a>
+
+              <a
+                href="https://image2url.com/images/1764396404406-2160d789-759c-48d0-b272-401b676e06c9.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h4 class="font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                      Nxtwave Generative AI Mastery Workshop
+                    </h4>
+                    <p class="text-sm text-[#4F4F4F] mt-1">Nxtwave</p>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors"></i>
+                </div>
+              </a>
+
+              <a
+                href="https://image2url.com/images/1764396578199-b687e581-7133-4476-87d0-ac096eccbbf8.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h4 class="font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                      GenAI Powered Data Analytics Job Simulation
+                    </h4>
+                    <p class="text-sm text-[#4F4F4F] mt-1">TATA</p>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors"></i>
+                </div>
+              </a>
+
+              <a
+                href="https://image2url.com/images/1764396654383-850df561-5641-4350-9656-0b80cf8c5125.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h4 class="font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                      The Complete Full-Stack Web Development Bootcamp
+                    </h4>
+                    <p class="text-sm text-[#4F4F4F] mt-1">Udemy</p>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors"></i>
+                </div>
+              </a>
+
+              <a
+                href="https://image2url.com/images/1764396726603-948d46dc-c08a-4786-aecb-6f6949e9a3ed.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all group"
+              >
+                <div class="flex justify-between items-center">
+                  <div>
+                    <h4 class="font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                      Generative AI Mastermind
+                    </h4>
+                    <p class="text-sm text-[#4F4F4F] mt-1">Outskill</p>
+                  </div>
+                  <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24 bg-slate-50/50 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 text-center fade-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">Education</h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full mb-6 opacity-80"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-12">
+          <!-- EDU 1 -->
+          <div class="flex flex-col md:flex-row gap-8 md:gap-12 fade-on-scroll">
+            <div class="md:w-1/3 text-right">
+              <p class="text-violet-600 font-bold text-lg">Aug 2023 - Jul 2027</p>
+              <p class="text-[#4F4F4F] text-sm mt-1 mb-3">Bangalore</p>
+              <div class="inline-block px-4 py-2 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-lg border border-white/20 transform hover:scale-105 transition-transform">
+                CGPA: 9.07
+              </div>
+            </div>
+            <div class="md:w-2/3 relative pl-8 md:pl-12 border-l-2 border-gray-200 pb-12">
+              <span class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-violet-600"></span>
+              <h3 class="text-2xl font-bold text-[#1A1A1A]">Nitte Meenakshi Institute of Technology</h3>
+              <p class="text-lg text-blue-600 font-medium mb-4">B.E. in Artificial Intelligence and Data Science</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-[#4F4F4F] text-sm leading-relaxed">
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                  Specializing in AI algorithms, Data Science methodologies, and scalable software systems.
+                </li>
+                <li class="flex items-start gap-3 text-[#4F4F4F] text-sm leading-relaxed">
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                  Active participant in technical workshops and hackathons.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EDU 2 -->
+          <div class="flex flex-col md:flex-row gap-8 md:gap-12 fade-on-scroll">
+            <div class="md:w-1/3 text-right">
+              <p class="text-violet-600 font-bold text-lg">Jun 2021 - Apr 2023</p>
+              <p class="text-[#4F4F4F] text-sm mt-1 mb-3">Chikkamagaluru</p>
+              <div class="inline-block px-4 py-2 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-lg border border-white/20 transform hover:scale-105 transition-transform">
+                93.16%
+              </div>
+            </div>
+            <div class="md:w-2/3 relative pl-8 md:pl-12 border-l-2 border-gray-200 pb-12">
+              <span class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-violet-600"></span>
+              <h3 class="text-2xl font-bold text-[#1A1A1A]">Sri BGS PU College</h3>
+              <p class="text-lg text-blue-600 font-medium mb-4">Senior Secondary Education - PCMB</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-[#4F4F4F] text-sm leading-relaxed">
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                  Core focus on Physics, Chemistry, Mathematics, and Biology (PCMB).
+                </li>
+                <li class="flex items-start gap-3 text-[#4F4F4F] text-sm leading-relaxed">
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                  Demonstrated strong analytical and problem-solving skills in core sciences.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EDU 3 -->
+          <div class="flex flex-col md:flex-row gap-8 md:gap-12 fade-on-scroll">
+            <div class="md:w-1/3 text-right">
+              <p class="text-violet-600 font-bold text-lg">Jun 2018 - Apr 2021</p>
+              <p class="text-[#4F4F4F] text-sm mt-1 mb-3">Chikkamagaluru</p>
+              <div class="inline-block px-4 py-2 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-lg border border-white/20 transform hover:scale-105 transition-transform">
+                84.16%
+              </div>
+            </div>
+            <div class="md:w-2/3 relative pl-8 md:pl-12 border-l-2 border-gray-200 pb-12">
+              <span class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-violet-600"></span>
+              <h3 class="text-2xl font-bold text-[#1A1A1A]">MES Prayogika High School</h3>
+              <p class="text-lg text-blue-600 font-medium mb-4">Secondary Education</p>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3 text-[#4F4F4F] text-sm leading-relaxed">
+                  <div class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                  Built a strong foundation in mathematics and general sciences.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 text-center fade-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">Selected Projects</h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full mb-6 opacity-80"></div>
+          <p class="text-[#4F4F4F] max-w-2xl mx-auto text-lg leading-relaxed">
+            Showcasing technical proficiency and product thinking.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-on-scroll">
+          <!-- p1 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full group transform hover:-translate-y-1">
+            <div class="h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
+              <img
+                src="https://image2url.com/images/1764402992780-c5e3b5f0-79cd-498f-bce6-bb7e268b215e.jpg"
+                alt="Agricure App"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                  Agricure App
+                </h3>
+              </div>
+              <p class="text-[#4F4F4F] text-sm leading-relaxed mb-4 flex-1">
+                A MERN stack mobile application integrated with Generative AI to support farmers with crop management,
+                real-time weather updates, and a digital marketplace. Designed to boost agricultural productivity and
+                income by 25-30%.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag-pill">MERN Stack</span>
+                <span class="tag-pill">Generative AI</span>
+                <span class="tag-pill">Mobile App</span>
+                <span class="tag-pill">React Native</span>
+              </div>
+              <div class="flex gap-4 pt-4 border-t border-gray-100">
+                <a
+                  href="https://github.com/Yashwanth-M-A/Agricure_App"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center w-full gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- p2 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full group transform hover:-translate-y-1">
+            <div class="h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
+              <img
+                src="https://i.ytimg.com/vi/MOkRavGxqyA/maxresdefault.jpg"
+                alt="YouTube Comment Spam Detection"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                  YouTube Comment Spam Detection
+                </h3>
+              </div>
+              <p class="text-[#4F4F4F] text-sm leading-relaxed mb-4 flex-1">
+                A machine-learning system that automates moderation by identifying spam in YouTube comments.
+                Utilizes advanced text cleaning and classification algorithms to maintain healthy community interactions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">scikit-learn</span>
+                <span class="tag-pill">pandas</span>
+                <span class="tag-pill">NumPy</span>
+              </div>
+              <div class="flex gap-4 pt-4 border-t border-gray-100">
+                <a
+                  href="https://github.com/Yashwanth-M-A/Youtube-Comment-Spam-Detection"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center w-full gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- p3 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full group transform hover:-translate-y-1">
+            <div class="h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1200/1*9xeFhmBT2ssJ1ejGccDLUA.png"
+                alt="Customer Churn Prediction"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                  Customer Churn Prediction
+                </h3>
+              </div>
+              <p class="text-[#4F4F4F] text-sm leading-relaxed mb-4 flex-1">
+                A predictive analytics model that analyzes customer behavior patterns to identify users likely to churn.
+                Enables businesses to deploy targeted retention strategies based on data-driven insights.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">pandas</span>
+                <span class="tag-pill">scikit-learn</span>
+                <span class="tag-pill">matplotlib</span>
+              </div>
+              <div class="flex gap-4 pt-4 border-t border-gray-100">
+                <a
+                  href="https://github.com/Yashwanth-M-A/Customer-Churn-Prediction"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center w-full gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- p4 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full group transform hover:-translate-y-1">
+            <div class="h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
+              <img
+                src="https://thumbs.dreamstime.com/b/basic-film-genres-types-movies-mind-map-concept-presentations-reports-basic-film-genres-types-movies-mind-264285913.jpg"
+                alt="Movie Genre Classification"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                  Movie Genre Classification
+                </h3>
+              </div>
+              <p class="text-[#4F4F4F] text-sm leading-relaxed mb-4 flex-1">
+                A Natural Language Processing (NLP) project that predicts a movie’s genre based solely on its plot summary.
+                Involves extensive text preprocessing, feature extraction, and model training.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Jupyter Notebook</span>
+                <span class="tag-pill">NLP</span>
+                <span class="tag-pill">Machine Learning</span>
+              </div>
+              <div class="flex gap-4 pt-4 border-t border-gray-100">
+                <a
+                  href="https://github.com/Yashwanth-M-A/Movie-Genre-Classification"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center w-full gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- p5 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 flex flex-col h-full group transform hover:-translate-y-1">
+            <div class="h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
+              <img
+                src="https://tse4.mm.bing.net/th/id/OIP.nR6_dFXdZMGwJ1QH_1CHKAHaHa?pid=Api&P=0&h=180"
+                alt="Simon Game Project"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-[#1A1A1A] group-hover:text-blue-600 transition-colors">
+                  Simon Game Project
+                </h3>
+              </div>
+              <p class="text-[#4F4F4F] text-sm leading-relaxed mb-4 flex-1">
+                An interactive web-based memory game inspired by the classic Simon pattern challenge.
+                Features a dynamic user interface and logic for handling complex user input sequences.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tag-pill">HTML</span>
+                <span class="tag-pill">CSS</span>
+                <span class="tag-pill">JavaScript</span>
+                <span class="tag-pill">DOM Manipulation</span>
+              </div>
+              <div class="flex gap-4 pt-4 border-t border-gray-100">
+                <a
+                  href="https://github.com/Yashwanth-M-A/Simon_game__Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center w-full gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-blue-600 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <i data-lucide="github" class="w-[18px] h-[18px]"></i>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-slate-50/50 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="mb-16 text-center fade-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">Contact</h2>
+          <div class="w-16 h-1.5 bg-gradient-to-r from-violet-600 to-blue-600 mx-auto rounded-full mb-6 opacity-80"></div>
+          <p class="text-[#4F4F4F] max-w-2xl mx-auto text-lg leading-relaxed">
+            Open for AI research, internships, and software collaborations.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="space-y-8 fade-on-scroll">
+            <p class="text-lg text-[#4F4F4F] leading-relaxed">
+              I am approachable and responsive. Whether you have a question about my research, a project proposal,
+              or just want to connect, feel free to reach out.
+            </p>
+            <div class="space-y-6">
+              <a
+                href="mailto:yashwanthma2@gmail.com"
+                class="flex items-center gap-4 text-[#4F4F4F] hover:text-violet-600 transition-colors group"
+              >
+                <div class="p-3 bg-white border border-gray-200 rounded-lg group-hover:border-violet-400 transition-colors">
+                  <i data-lucide="mail" class="w-5 h-5 text-[#1A1A1A] group-hover:text-violet-600 transition-colors"></i>
+                </div>
+                <span class="font-medium break-all">yashwanthma2@gmail.com</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yashwanth-m-a-768901303/"
+                target="_blank"
+                rel="noreferrer"
+                class="flex items-center gap-4 text-[#4F4F4F] hover:text-blue-600 transition-colors group"
+              >
+                <div class="p-3 bg-white border border-gray-200 rounded-lg group-hover:border-blue-400 transition-colors">
+                  <i data-lucide="linkedin" class="w-5 h-5 text-[#1A1A1A] group-hover:text-blue-600 transition-colors"></i>
+                </div>
+                <span class="font-medium break-all">LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/Yashwanth-M-A"
+                target="_blank"
+                rel="noreferrer"
+                class="flex items-center gap-4 text-[#4F4F4F] hover:text-gray-900 transition-colors group"
+              >
+                <div class="p-3 bg-white border border-gray-200 rounded-lg group-hover:border-gray-400 transition-colors">
+                  <i data-lucide="github" class="w-5 h-5 text-[#1A1A1A] group-hover:text-gray-900 transition-colors"></i>
+                </div>
+                <span class="font-medium break-all">GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- UPDATED CONTACT FORM -->
+          <form
+            id="contact-form"
+            class="space-y-4 bg-white p-8 rounded-2xl border border-gray-200 shadow-lg fade-on-scroll"
+          >
+            <div>
+              <label class="block text-sm font-bold text-[#1A1A1A] mb-2">Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                class="w-full px-4 py-3 rounded-lg bg-[#F5F5F5] border border-gray-200 text-[#1A1A1A] focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                placeholder="Your Name"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-[#1A1A1A] mb-2">Email</label>
+              <input
+                type="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 rounded-lg bg-[#F5F5F5] border border-gray-200 text-[#1A1A1A] focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                placeholder="your.email@example.com"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-[#1A1A1A] mb-2">Message</label>
+              <textarea
+                rows="4"
+                name="message"
+                required
+                class="w-full px-4 py-3 rounded-lg bg-[#F5F5F5] border border-gray-200 text-[#1A1A1A] focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
+                placeholder="How can we collaborate?"
+              ></textarea>
+            </div>
+            <button
+              id="submit-btn"
+              type="submit"
+              class="w-full py-4 bg-gradient-to-r from-violet-600 to-blue-600 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95"
+            >
+              Send Message
+              <i data-lucide="arrow-up-right" class="w-[18px] h-[18px]"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-white border-t border-gray-200 text-center">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-2">
+      <p id="footer-text" class="text-[#4F4F4F] font-medium text-sm"></p>
+    </div>
+  </footer>
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
